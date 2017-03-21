@@ -1,0 +1,15 @@
+{
+  "name": "snapped",
+  "version": "0.0.0",
+  "description": "Snapshot testing for React UI. Inspired by Jest.",
+  "author": "Mark <mark@remarkablemark.org>",
+  "keywords": [
+    "snapped",
+    "snapshot",
+    "testing",
+    "jest",
+    "react",
+    "ui"
+  ],
+  "license": "MIT"
+}
