@@ -11,5 +11,8 @@
     "react",
     "ui"
   ],
+  "devDependencies": {
+    "jest": "^19.0.2"
+  },
   "license": "MIT"
 }
