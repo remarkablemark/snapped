@@ -1,0 +1,7 @@
+.babel*
+.eslint*
+.travis*
+.npmignore
+
+coverage/
+test/
