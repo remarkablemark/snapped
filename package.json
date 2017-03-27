@@ -4,6 +4,7 @@
   "description": "Snapshot testing for React UI. Inspired by Jest.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
+    "test": "jest",
     "lint": "eslint --ignore-path .gitignore ."
   },
   "keywords": [
