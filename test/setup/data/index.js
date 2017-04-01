@@ -59,5 +59,15 @@ export default {
             title: '<input> with onClick',
             tree: render(<input onClick={() => {}} />),
         },
+
+        // void element with object prop
+        {
+            title: '<input> with style',
+            tree: render(<input style={{ color: 'black', }} />),
+        },
+        {
+            title: '<input> with styles',
+            tree: render(<input style={{ color: 'black', fontSize: 14, }} />),
+        },
     ],
 };
