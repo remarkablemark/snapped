@@ -53,5 +53,11 @@ export default {
             title: '<input> that is not checked',
             tree: render(<input checked={false} />),
         },
+
+        // void element with function prop
+        {
+            title: '<input> with onClick',
+            tree: render(<input onClick={() => {}} />),
+        },
     ],
 };
