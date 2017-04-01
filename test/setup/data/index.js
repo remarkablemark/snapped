@@ -43,5 +43,15 @@ export default {
             title: '<link> with type and href',
             tree: render(<link type='text/css' href='/style.css' />),
         },
+
+        // void element with boolean attributes
+        {
+            title: '<input> that is checked',
+            tree: render(<input checked />),
+        },
+        {
+            title: '<input> that is not checked',
+            tree: render(<input checked={false} />),
+        },
     ],
 };
