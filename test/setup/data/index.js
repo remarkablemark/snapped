@@ -22,7 +22,7 @@ function render(reactElement) {
 export default {
     title: 'treeToSnapshot()',
     tests: [
-        // self-closing
+        // void element (self-closing tag)
         {
             title: '<br />',
             tree: render(<br />),
@@ -30,6 +30,18 @@ export default {
         {
             title: 'empty <div>',
             tree: render(<div />),
+        },
+
+        // void element with single attribute
+        {
+            title: '<link> with href',
+            tree: render(<link href='/style.css' />),
+        },
+
+        // void element with multiple attributes
+        {
+            title: '<link> with type and href',
+            tree: render(<link type='text/css' href='/style.css' />),
         },
     ],
 };
