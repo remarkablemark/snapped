@@ -79,6 +79,17 @@ export default {
             title: '<input> with styles',
             tree: render(<input style={{ color: 'black', fontSize: 14, }} />),
         },
+        {
+            title: '<input> with nested object prop',
+            tree: render(<input nested={{
+                level1: {
+                    key1: 'value1',
+                    level2: {
+                        key2: 'value2',
+                    },
+                },
+            }} />),
+        },
 
         // void element with array
         {
@@ -88,6 +99,10 @@ export default {
         {
             title: '<input> with array prop',
             tree: render(<input array={[1, 2, 3]} />),
+        },
+        {
+            title: '<input> with multidimensional array prop',
+            tree: render(<input multi={[[1, 2], 3, 4]} />),
         },
     ],
 };
