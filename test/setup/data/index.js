@@ -79,5 +79,15 @@ export default {
             title: '<input> with styles',
             tree: render(<input style={{ color: 'black', fontSize: 14, }} />),
         },
+
+        // void element with array
+        {
+            title: '<input> with empty array prop',
+            tree: render(<input array={[]} />),
+        },
+        {
+            title: '<input> with array prop',
+            tree: render(<input array={[1, 2, 3]} />),
+        },
     ],
 };
