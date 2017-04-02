@@ -104,5 +104,34 @@ export default {
             title: '<input> with multidimensional array prop',
             tree: render(<input multi={[[1, 2], 3, 4]} />),
         },
+
+        // non-void element with no children
+        {
+            title: '<head> with no children',
+            tree: render(<head></head>),
+        },
+
+        // element with children
+        {
+            title: '<title> with text',
+            tree: render(<title>text</title>),
+        },
+
+        // element with children and props
+        {
+            title: '<div> with text and single prop',
+            tree: render(<div className='class'>text</div>),
+        },
+        {
+            title: '<div> with text and multiple props',
+            tree: render(
+                <div
+                    className='class'
+                    style={{ fontWeight: 'bold' }}
+                >
+                    text
+                </div>
+            ),
+        },
     ],
 };
