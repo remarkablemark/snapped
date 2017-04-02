@@ -54,6 +54,12 @@ export default {
             tree: render(<input checked={false} />),
         },
 
+        // void element with number prop
+        {
+            title: '<input> with tabIndex',
+            tree: render(<input tabIndex={1} />),
+        },
+
         // void element with function prop
         {
             title: '<input> with onClick',
@@ -61,6 +67,10 @@ export default {
         },
 
         // void element with object prop
+        {
+            title: '<input> with empty style object',
+            tree: render(<input style={{}} />),
+        },
         {
             title: '<input> with style',
             tree: render(<input style={{ color: 'black', }} />),
