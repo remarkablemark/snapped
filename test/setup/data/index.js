@@ -133,5 +133,29 @@ export default {
                 </div>
             ),
         },
+
+        // nested elements
+        {
+            title: 'nested elements',
+            tree: render(
+                <body>
+                    <div>
+                        <p>
+                            text
+                        </p>
+                    </div>
+                </body>
+            ),
+        },
+        {
+            title: '<ul> with nested <li>',
+            tree: render(
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            ),
+        },
     ],
 };
