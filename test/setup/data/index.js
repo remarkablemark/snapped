@@ -157,5 +157,17 @@ export default {
                 </ul>
             ),
         },
+        {
+            title: 'nested elements and void elements',
+            tree: render(
+                <section>
+                    <p>text</p>
+                    <br />
+                    <input />
+                    <p><em>more text</em></p>
+                    <hr />
+                </section>
+            ),
+        },
     ],
 };
