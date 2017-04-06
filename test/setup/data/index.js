@@ -169,5 +169,17 @@ export default {
                 </section>
             ),
         },
+        {
+            title: 'nested elements and void elements with props',
+            tree: render(
+                <section className='section'>
+                    <p style={{ fontFamily: 'Arial' }}>text</p>
+                    <br />
+                    <input type='text' value='input text' />
+                    <p><em>more text</em></p>
+                    <hr width='100px' height='100px' />
+                </section>
+            ),
+        },
     ],
 };
