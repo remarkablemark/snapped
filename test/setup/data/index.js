@@ -181,5 +181,15 @@ export default {
                 </section>
             ),
         },
+
+        // react elements not rendered to json
+        {
+            title: 'unrendered <p>',
+            tree: <p />,
+        },
+        {
+            title: 'unrendered <p> with props and children',
+            tree: <p className='class'>children<area /></p>,
+        },
     ],
 };
