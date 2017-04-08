@@ -182,6 +182,32 @@ export default {
             ),
         },
 
+        // element with react element as prop
+        {
+            title: '<meta> with prop react element',
+            tree: render(<meta prop={<area />} />),
+        },
+        {
+            title: '<meta> with prop react element that has props',
+            tree: render(<meta prop={<area className='class' />} />),
+        },
+        {
+            title: '<meta> with prop react element that has children',
+            tree: render(<meta prop={<p><i>text</i></p>} />),
+        },
+        {
+            title: '<div> with prop react element that has props and children',
+            tree: render(
+                <div prop={
+                    <div
+                        className='class'
+                        style={{ color: 'green', fontWeight: 'normal' }}
+                    >
+                        text
+                    </div>
+                } />),
+        },
+
         // react elements not rendered to json
         {
             title: 'unrendered <p>',
