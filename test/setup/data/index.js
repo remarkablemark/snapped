@@ -5,6 +5,12 @@
  */
 import React from 'react';
 import renderer from 'react-test-renderer';
+import {
+    Button,
+    Component,
+    ComponentWithChildren,
+    Stateless,
+} from './components';
 
 /**
  * Renders React element to tree.
@@ -255,6 +261,28 @@ export default {
                         text
                     </div>
                 } />),
+        },
+
+        // components
+        {
+            title: 'stateless component',
+            tree: render(<Stateless />),
+        },
+        {
+            title: 'component class',
+            tree: render(<Component />),
+        },
+        {
+            title: 'component class with children',
+            tree: render(
+                <ComponentWithChildren>
+                    children
+                </ComponentWithChildren>
+            ),
+        },
+        {
+            title: 'component class with onClick',
+            tree: render(<Button />),
         },
 
         // react elements not rendered to json
