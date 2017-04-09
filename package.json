@@ -9,7 +9,8 @@
     "test:setup": "jest test/setup -u",
     "test:lib": "jest test/lib --coverage",
     "test:watch": "jest --watch test",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "babel-jest": "^19.0.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "coveralls": "^2.11.15",
     "eslint": "^3.4.0",
     "eslint-plugin-react": "^6.10.3",
     "jest": "^19.0.2",
