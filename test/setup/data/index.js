@@ -56,6 +56,28 @@ export default {
             tree: render(<input checked={false} />),
         },
 
+        // data attribute
+        {
+            title: '<dd> with data attribute key only',
+            tree: render(<dd data-key />),
+        },
+        {
+            title: '<dd> with data attribute key and value',
+            tree: render(<dd data-key='value' />),
+        },
+
+        // undefined prop
+        {
+            title: '<base> with undefined prop',
+            tree: render(<base prop={undefined} />),
+        },
+
+        // null prop
+        {
+            title: '<col> with null prop',
+            tree: render(<col prop={null} />),
+        },
+
         // number prop
         {
             title: '<input> with tabIndex',
