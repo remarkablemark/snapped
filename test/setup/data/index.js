@@ -48,8 +48,12 @@ export default {
 
         // boolean attributes
         {
+            title: '<fieldset> that is disabled',
+            tree: render(<fieldset disabled />),
+        },
+        {
             title: '<input> that is checked',
-            tree: render(<input checked />),
+            tree: render(<input checked={true} />),
         },
         {
             title: '<input> that is not checked',
@@ -203,6 +207,27 @@ export default {
                     <p><em>more text</em></p>
                     <hr width='100px' height='100px' />
                 </section>
+            ),
+        },
+        {
+            title: 'mixture of elements, props, and text',
+            tree: render(
+                <div>
+                    <header style={{ textAlign: 'center', marginLeft: '2em' }}>
+                        <h2 className='heading'>Heading</h2>
+                    </header>
+                    <hr />
+                    <p>Lorem ipsum&nbps;</p>
+                    <ol>
+                        <li aria-label='foo'>One</li>
+                    </ol>
+                    <input
+                        type='text'
+                        value='bar'
+                        onChange={() => {}}
+                        readOnly
+                    />
+                </div>
             ),
         },
 
