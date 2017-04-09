@@ -7,7 +7,8 @@
   "scripts": {
     "test": "npm run test:setup && npm run test:lib",
     "test:setup": "jest test/setup -u",
-    "test:lib": "jest test/lib",
+    "test:lib": "jest test/lib --coverage",
+    "test:watch": "jest --watch test",
     "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
