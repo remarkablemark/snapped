@@ -22,29 +22,31 @@ function render(reactElement) {
 export default {
     title: 'treeToSnapshot()',
     tests: [
-        // void element (self-closing tag)
+        // void element
         {
             title: '<br />',
             tree: render(<br />),
         },
+
+        // self-closing tag
         {
             title: 'empty <div>',
             tree: render(<div />),
         },
 
-        // void element with single attribute
+        // single attribute
         {
             title: '<link> with href',
             tree: render(<link href='/style.css' />),
         },
 
-        // void element with multiple attributes
+        // multiple attributes
         {
             title: '<link> with type and href',
             tree: render(<link type='text/css' href='/style.css' />),
         },
 
-        // void element with boolean attributes
+        // boolean attributes
         {
             title: '<input> that is checked',
             tree: render(<input checked />),
@@ -54,19 +56,19 @@ export default {
             tree: render(<input checked={false} />),
         },
 
-        // void element with number prop
+        // number prop
         {
             title: '<input> with tabIndex',
             tree: render(<input tabIndex={1} />),
         },
 
-        // void element with function prop
+        // function prop
         {
             title: '<input> with onClick',
             tree: render(<input onClick={() => {}} />),
         },
 
-        // void element with object prop
+        // object prop
         {
             title: '<input> with empty style object',
             tree: render(<input style={{}} />),
@@ -91,7 +93,7 @@ export default {
             }} />),
         },
 
-        // void element with array
+        // array prop
         {
             title: '<input> with empty array prop',
             tree: render(<input array={[]} />),
@@ -105,19 +107,19 @@ export default {
             tree: render(<input multi={[[1, 2], 3, 4]} />),
         },
 
-        // non-void element with no children
+        // no children
         {
             title: '<head> with no children',
             tree: render(<head></head>),
         },
 
-        // element with children
+        // children
         {
             title: '<title> with text',
             tree: render(<title>text</title>),
         },
 
-        // element with children and props
+        // children and props
         {
             title: '<div> with text and single prop',
             tree: render(<div className='class'>text</div>),
@@ -182,7 +184,7 @@ export default {
             ),
         },
 
-        // element with react element as prop
+        // react element as prop
         {
             title: '<meta> with prop react element',
             tree: render(<meta prop={<area />} />),
