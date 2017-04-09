@@ -102,27 +102,50 @@ export default {
 
         // object prop
         {
-            title: '<input> with empty style object',
-            tree: render(<input style={{}} />),
+            title: '<s> with empty style prop',
+            tree: render(<s style={{}} />),
         },
         {
-            title: '<input> with style',
-            tree: render(<input style={{ color: 'black', }} />),
+            title: '<s> with 1 style rule',
+            tree: render(<s style={{ color: 'black' }} />),
         },
         {
-            title: '<input> with styles',
-            tree: render(<input style={{ color: 'black', fontSize: 14, }} />),
+            title: '<s> with 2 style rules',
+            tree: render(<s style={{ color: 'black', fontSize: 14 }} />),
+        },
+        {
+            title: '<s> with 3 style rules',
+            tree: render(
+                <s style={{
+                    color: 'black',
+                    fontSize: 14,
+                    textDecoration: 'none',
+                }} />
+            ),
+        },
+        {
+            title: '<s> with 3 style rules and children',
+            tree: render(
+                <s style={{
+                    fontSize: '100%',
+                    textAlign: 'center',
+                    lineHeight: 42,
+                }}>
+                    children
+                </s>
+            ),
         },
         {
             title: '<input> with nested object prop',
-            tree: render(<input nested={{
-                level1: {
-                    key1: 'value1',
-                    level2: {
-                        key2: 'value2',
+            tree: render(
+                <input nested={{
+                    level1: {
+                        key1: 'value1',
+                        level2: {
+                            key2: 'value2',
+                        },
                     },
-                },
-            }} />),
+                }} />),
         },
 
         // array prop
