@@ -266,5 +266,25 @@ export default {
             title: 'unrendered <p> with props and children',
             tree: <p className='class'>children<area /></p>,
         },
+
+        // miscellaneous cases
+        {
+            title: 'invalid <foo>',
+            tree: render(<foo bar='baz' />),
+        },
+        {
+            title: 'invalid <foo> and prop',
+            tree: render(<foo bar='baz' />),
+        },
+        {
+            title: '<p> with duplicate props',
+            tree: render(
+                <p className='class' className='dupe'>text</p> // eslint-disable-line react/jsx-no-duplicate-props
+            ),
+        },
+        {
+            title: '<table> with props that should be in alphabetical order',
+            tree: render(<table b={2} c={3} a={1} />),
+        },
     ],
 };
