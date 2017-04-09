@@ -10,6 +10,13 @@
     "test:lib": "jest test/lib",
     "lint": "eslint --ignore-path .gitignore ."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/snapped"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/snapped/issues"
+  },
   "keywords": [
     "snapped",
     "snapshot",
